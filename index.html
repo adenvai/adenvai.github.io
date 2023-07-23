@@ -154,23 +154,22 @@
                     <form class="mt-4" name="submit-to-google-sheet">
                       <div class="mb-3">
                         <label for="nama" class="form-label">Nama Lengkap</label>
-                        <input type="text" class="form-control" id="nama" aria-describedby="nama" name="nama">
-                        <div id="emailHelp" class="form-text">Isi dengan nama lengkap Anda</div>
+                        <input type="text" class="form-control" id="nama" aria-describedby="nama" name="nama" autocomplete="off" autofocus required>
+                        <div id="namaHelp" class="form-text">Isi dengan nama lengkap Anda</div>
                       </div>
                       <div class="mb-3">
                         <label for="telp" class="form-label">Kontak</label>
-                        <input type="text" class="form-control" id="telp" aria-describedby="telp" name="kontak">
+                        <input type="tel" class="form-control" id="telp" aria-describedby="telp" name="kontak" autocomplete="off" required>
                         <div id="telphelp" class="form-text">Isi dengan nomor Hp Aktif / WhatsApp Aktif</div>
                       </div>
                       <div class="mb-3">
                         <label for="komentar" class="form-label">Masukan dan Saran</label>
                         <textarea class="form-control" id="ekomentar" rows="4" name="pesan"></textarea>
                       </div>
-
-                      <div class="alert alert-warning alert-dismissible fade show text-dark text-center d-none" style="font-size: 11pt;" role="alert">
-                        Masukan dan Saran Anda Sudah Kami Terima <br><strong>Terimakasih Partisipasi Anda.</strong>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                      </div>
+                        <div class="alert alert-warning alert-dismissible fade show text-dark text-center d-none my-alert" style="font-size: 11pt;" role="alert">
+                          Masukan dan Saran Anda Sudah Kami Terima <br><strong>Terimakasih Partisipasi Anda.</strong>
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
 
                       <button type="submit" class="btn btn-primary text-center btn-kirim">Kirim</button>
                       
@@ -179,6 +178,7 @@
                         Hadangi Satumat...
                       </button>
                     </form>
+                    
                 </div>
               </div>
             </div>
@@ -252,7 +252,7 @@
       const form = document.forms['submit-to-google-sheet']
       const btnKirim = document.querySelector('.btn-kirim')
       const btnTunggu = document.querySelector('.btn-tunggu')
-      const myAlert = document.querySelector('.alert')
+      const myAlert = document.querySelector('.my-alert')
 
       form.addEventListener('submit', e => {
         e.preventDefault()
