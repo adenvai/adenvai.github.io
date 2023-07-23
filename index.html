@@ -166,7 +166,18 @@
                         <label for="komentar" class="form-label">Masukan dan Saran</label>
                         <textarea class="form-control" id="ekomentar" rows="4" name="pesan"></textarea>
                       </div>
-                      <button type="submit" class="btn btn-primary text-center">Kirim</button>
+
+                      <div class="alert alert-warning alert-dismissible fade show text-dark text-center d-none" style="font-size: 11pt;" role="alert">
+                        Masukan dan Saran Anda Sudah Kami Terima <br><strong>Terimakasih Partisipasi Anda.</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+
+                      <button type="submit" class="btn btn-primary text-center btn-kirim">Kirim</button>
+                      
+                      <button class="btn btn-primary btn-tunggu d-none" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Hadangi Satumat...
+                      </button>
                     </form>
                 </div>
               </div>
@@ -239,11 +250,26 @@
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbx6AP4WGfC-s_LiCv4kYoOwQaITLYkNdCd4EEa58VjzHHvZOdYQ47vw48dzBs96giSWdA/exec'
       const form = document.forms['submit-to-google-sheet']
-    
+      const btnKirim = document.querySelector('.btn-kirim')
+      const btnTunggu = document.querySelector('.btn-tunggu')
+      const myAlert = document.querySelector('.alert')
+
       form.addEventListener('submit', e => {
         e.preventDefault()
+        // ketika tombol submit di klik
+        // tampilkan tombol loading, hilangkan tombol kirim
+        btnTunggu.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
+          .then(response => {
+            // tampilkan tombol kirim, hilangkan tombol loading
+            btnTunggu.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            myAlert.classList.toggle('d-none');
+            form.reset();
+            console.log('Success!', response)
+          })
           .catch(error => console.error('Error!', error.message))
       })
     </script>
