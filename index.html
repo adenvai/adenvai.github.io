@@ -83,7 +83,16 @@
     </div>
 
     <!-- Kolom Berita -->
-    <section class="berita" id="berita"></section>
+    <div class="container-fluid" style="padding: 0; margin: 0">
+      <div class="row justify-content-md-center mx-1">
+        <div class="col-sm-8" style="padding: 0; margin: 0">
+          <section class="berita" id="berita"></section>
+        </div>
+        <div class="col-sm-4">
+          <section class="pelengkap" id="pelengkap"></section>
+        </div>
+      </div>
+    </div>
 
     <!-- Foto-foto galeri kegiatan dinsos -->
     <div class="container mt-4">
@@ -114,6 +123,7 @@
       const spanduk = document.getElementById("spanduk");
       const carousel = document.getElementById("carousel");
       const berita = document.getElementById("berita");
+      const pelengkap = document.getElementById("pelengkap");
       const footer = document.getElementById("footer");
 
       // navigasi
@@ -141,6 +151,13 @@
       fetch("kolom berita.html").then(function (snap) {
         snap.text().then(function (result) {
           berita.innerHTML = result;
+        });
+      });
+
+      // pelengkap
+      fetch("kolom pelengkap.html").then(function (snap) {
+        snap.text().then(function (result) {
+          pelengkap.innerHTML = result;
         });
       });
 
