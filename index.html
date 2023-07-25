@@ -89,65 +89,64 @@
           <section class="berita" id="berita"></section>
         </div>
         <div class="col-sm-4">
-          <section class="pelengkap" id="pelengkap">
-            <div class="row mt-3">
-              <div class="col">
-                <div class="card shadow-sm">
-                  <div class="card-body" style="background-color: rgb(215, 249, 249)">
-                    <h5 class="card-title fw-bold text-center">Masukan dan Saran</h5>
-                    <form class="mt-4" name="submit-to-google-sheet">
-                      <div class="mb-3">
-                        <label for="nama" class="form-label">Nama Lengkap</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="nama"
-                          aria-describedby="nama"
-                          name="nama"
-                          autocomplete="off"
-                          required
-                          oninvalid="this.setCustomValidity('Nama harus di isi dengan LENGKAP dan harus di isi')"
-                          oninput="this.setCustomValidity('')"
-                        />
-                        <div id="namaHelp" class="form-text">Isi dengan nama lengkap Anda</div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="telp" class="form-label">Kontak</label>
-                        <input
-                          type="tel"
-                          class="form-control"
-                          id="telp"
-                          aria-describedby="telp"
-                          name="kontak"
-                          autocomplete="off"
-                          required
-                          pattern="(\+62|62|0)8[1-9][0-9]{6,9}$"
-                          oninvalid="this.setCustomValidity('Isikan Nomor Handphone atau Nomor WhatsApp Anda')"
-                          oninput="this.setCustomValidity('')"
-                        />
-                        <div id="telphelp" class="form-text">Isi dengan nomor Hp Aktif / WhatsApp Aktif</div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="komentar" class="form-label">Masukan dan Saran</label>
-                        <textarea class="form-control" id="ekomentar" rows="4" name="pesan"></textarea>
-                      </div>
-                      <div class="alert alert-warning alert-dismissible fade show text-dark text-center d-none my-alert" style="font-size: 11pt" role="alert">
-                        Masukan dan Saran Anda Sudah Kami Terima <br /><strong>Terimakasih Partisipasi Anda.</strong>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                      </div>
+          <section class="pelengkap" id="pelengkap"></section>
+          <div class="row mt-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="card-body" style="background-color: rgb(215, 249, 249)">
+                  <h5 class="card-title fw-bold text-center">Masukan dan Saran</h5>
+                  <form class="mt-4" name="submit-to-google-sheet">
+                    <div class="mb-3">
+                      <label for="nama" class="form-label">Nama Lengkap</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nama"
+                        aria-describedby="nama"
+                        name="nama"
+                        autocomplete="off"
+                        required
+                        oninvalid="this.setCustomValidity('Nama harus di isi dengan LENGKAP dan harus di isi')"
+                        oninput="this.setCustomValidity('')"
+                      />
+                      <div id="namaHelp" class="form-text">Isi dengan nama lengkap Anda</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="telp" class="form-label">Kontak</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="telp"
+                        aria-describedby="telp"
+                        name="kontak"
+                        autocomplete="off"
+                        required
+                        pattern="(\+62|62|0)8[1-9][0-9]{6,9}$"
+                        oninvalid="this.setCustomValidity('Isikan Nomor Handphone atau Nomor WhatsApp Anda')"
+                        oninput="this.setCustomValidity('')"
+                      />
+                      <div id="telphelp" class="form-text">Isi dengan nomor Hp Aktif / WhatsApp Aktif</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="komentar" class="form-label">Masukan dan Saran</label>
+                      <textarea class="form-control" id="ekomentar" rows="4" name="pesan"></textarea>
+                    </div>
+                    <div class="alert alert-warning alert-dismissible fade show text-dark text-center d-none my-alert" style="font-size: 11pt" role="alert">
+                      Masukan dan Saran Anda Sudah Kami Terima <br /><strong>Terimakasih Partisipasi Anda.</strong>
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
 
-                      <button type="submit" class="btn btn-primary text-center btn-kirim">Kirim</button>
+                    <button type="submit" class="btn btn-primary text-center btn-kirim">Kirim</button>
 
-                      <button class="btn btn-primary btn-tunggu d-none" type="button" disabled>
-                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                        Hadangi Satumat...
-                      </button>
-                    </form>
-                  </div>
+                    <button class="btn btn-primary btn-tunggu d-none" type="button" disabled>
+                      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      Hadangi Satumat...
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </div>
     </div>
