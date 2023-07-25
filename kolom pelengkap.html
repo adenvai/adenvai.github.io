@@ -76,4 +76,30 @@
     </div>
   </div>
 </div>
-<p></p>
+
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbx6AP4WGfC-s_LiCv4kYoOwQaITLYkNdCd4EEa58VjzHHvZOdYQ47vw48dzBs96giSWdA/exec";
+  const form = document.forms["submit-to-google-sheet"];
+  const btnKirim = document.querySelector(".btn-kirim");
+  const btnTunggu = document.querySelector(".btn-tunggu");
+  const myAlert = document.querySelector(".my-alert");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    // ketika tombol submit di klik
+    // tampilkan tombol loading, hilangkan tombol kirim
+    btnTunggu.classList.toggle("d-none");
+    btnKirim.classList.toggle("d-none");
+
+    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+      .then((response) => {
+        // tampilkan tombol kirim, hilangkan tombol loading
+        btnTunggu.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        myAlert.classList.toggle("d-none");
+        form.reset();
+        console.log("Success!", response);
+      })
+      .catch((error) => console.error("Error!", error.message));
+  });
+</script>
