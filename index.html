@@ -85,10 +85,10 @@
     <!-- Kolom Berita -->
     <div class="container-fluid" style="padding: 0; margin: 0">
       <div class="row justify-content-md-center mx-1">
-        <div class="col-sm-8" style="padding: 0; margin: 0">
+        <div class="col-sm-9" style="padding: 0; margin: 0">
           <section class="berita" id="berita"></section>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <section class="pelengkap" id="pelengkap"></section>
           <div class="row mt-3">
             <div class="col">
@@ -153,23 +153,7 @@
 
     <!-- Foto-foto galeri kegiatan dinsos -->
     <div class="container mt-4">
-      <div class="row">
-        <div class="col-sm-4 mb-3">
-          <div class="card">
-            <img src="asset/image/gambar kosong.jpg" class="card-img-top" alt="..." />
-          </div>
-        </div>
-        <div class="col-sm-4 mb-3">
-          <div class="card">
-            <img src="asset/image/gambar kosong.jpg" class="card-img-top" alt="..." />
-          </div>
-        </div>
-        <div class="col-sm-4 mb-3">
-          <div class="card">
-            <img src="asset/image/gambar kosong.jpg" class="card-img-top" alt="..." />
-          </div>
-        </div>
-      </div>
+      <section class="galeri" id="galeri"></section>
     </div>
 
     <!-- footer -->
@@ -181,6 +165,7 @@
       const carousel = document.getElementById("carousel");
       const berita = document.getElementById("berita");
       const pelengkap = document.getElementById("pelengkap");
+      const galeri = document.getElementById("galeri");
       const footer = document.getElementById("footer");
 
       // navigasi
@@ -215,6 +200,13 @@
       fetch("kolom pelengkap.html").then(function (snap) {
         snap.text().then(function (result) {
           pelengkap.innerHTML = result;
+        });
+      });
+
+      // galeri
+      fetch("galeri.html").then(function (snap) {
+        snap.text().then(function (result) {
+          galeri.innerHTML = result;
         });
       });
 
