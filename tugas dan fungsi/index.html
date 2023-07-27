@@ -82,7 +82,7 @@
       const footer = document.getElementById("footer");
 
       // navigasi
-      fetch("../navigasi.html").then(function (snap) {
+      fetch("../bagian/navigasi.html").then(function (snap) {
         snap.text().then(function (result) {
           navigasi.innerHTML = result;
         });
@@ -95,28 +95,28 @@
         });
       });
       // kekiri
-      fetch("../konten kiri.html").then(function (snap) {
+      fetch("../bagian/konten kiri.html").then(function (snap) {
         snap.text().then(function (result) {
           kekiri.innerHTML = result;
         });
       });
 
       // berita sebelah kiri
-      fetch("../berita kiri.html").then(function (snap) {
+      fetch("../bagian/berita kiri.html").then(function (snap) {
         snap.text().then(function (result) {
           newskiri.innerHTML = result;
         });
       });
 
       // berita
-      fetch("../galeri2.html").then(function (snap) {
+      fetch("../bagian/galeri2.html").then(function (snap) {
         snap.text().then(function (result) {
           galeri.innerHTML = result;
         });
       });
 
       // footer
-      fetch("../footer.html").then(function (snap) {
+      fetch("../bagian/footer.html").then(function (snap) {
         snap.text().then(function (result) {
           footer.innerHTML = result;
         });

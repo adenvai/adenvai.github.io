@@ -245,34 +245,34 @@
       const footer = document.getElementById("footer");
 
       // navigasi
-      fetch("../navigasi.html").then(function (snap) {
+      fetch("../bagian/navigasi.html").then(function (snap) {
         snap.text().then(function (result) {
           navigasi.innerHTML = result;
         });
       });
 
       // berita
-      fetch("../kolom berita.html").then(function (snap) {
+      fetch("../bagian/kolom berita.html").then(function (snap) {
         snap.text().then(function (result) {
           berita.innerHTML = result;
         });
       });
       // konten kiri
-      fetch("../konten kiri.html").then(function (snap) {
+      fetch("../bagian/konten kiri.html").then(function (snap) {
         snap.text().then(function (result) {
           kekiri.innerHTML = result;
         });
       });
 
       // berita
-      fetch("../galeri2.html").then(function (snap) {
+      fetch("../bagian/galeri2.html").then(function (snap) {
         snap.text().then(function (result) {
           galeri.innerHTML = result;
         });
       });
 
       // footer
-      fetch("../footer.html").then(function (snap) {
+      fetch("../bagian/footer.html").then(function (snap) {
         snap.text().then(function (result) {
           footer.innerHTML = result;
         });

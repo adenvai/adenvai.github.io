@@ -169,49 +169,49 @@
       const footer = document.getElementById("footer");
 
       // navigasi
-      fetch("navigasi.html").then(function (snap) {
+      fetch("../bagian/navigasi.html").then(function (snap) {
         snap.text().then(function (result) {
           navigasi.innerHTML = result;
         });
       });
 
       // spanduk
-      fetch("spanduk.html").then(function (snap) {
+      fetch("../bagian/spanduk.html").then(function (snap) {
         snap.text().then(function (result) {
           spanduk.innerHTML = result;
         });
       });
 
       // carousel
-      fetch("carousel.html").then(function (snap) {
+      fetch("../bagian/carousel.html").then(function (snap) {
         snap.text().then(function (result) {
           carousel.innerHTML = result;
         });
       });
 
       // berita
-      fetch("kolom berita.html").then(function (snap) {
+      fetch("../bagian/kolom berita.html").then(function (snap) {
         snap.text().then(function (result) {
           berita.innerHTML = result;
         });
       });
 
       // pelengkap
-      fetch("kolom pelengkap.html").then(function (snap) {
+      fetch("../bagian/kolom pelengkap.html").then(function (snap) {
         snap.text().then(function (result) {
           pelengkap.innerHTML = result;
         });
       });
 
       // galeri
-      fetch("galeri.html").then(function (snap) {
+      fetch("../bagian/galeri.html").then(function (snap) {
         snap.text().then(function (result) {
           galeri.innerHTML = result;
         });
       });
 
       // footer
-      fetch("footer.html").then(function (snap) {
+      fetch("../bagian/footer.html").then(function (snap) {
         snap.text().then(function (result) {
           footer.innerHTML = result;
         });
