@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap");
+      @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+      * {
+        font-family: "Instrument Sans", sans-serif;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      .navigation a {
+        color: #0a0a0a !important;
+      }
+    </style>
+
+    <title>Website Resmi Dinas Sosial Kab. Tapin</title>
+  </head>
+
+  <body>
+    <!-- navigasi bar -->
+    <section class="navigasi" id="navigasi"></section>
+    <div style="margin-top: 100px"></div>
+
+    <div class="container-fluid">
+      <div class="row px-2">
+        <div class="col-sm-9 mb-3 text-center">
+          <div class="row">
+            <div class="col">
+              <div class="alert fw-bold" style="border: 0; background-color: rgb(229, 247, 229)"><h3>PRODUK STANDAR PELAYANAN</h3></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-start">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <button class="nav-link active" id="v-pills-izinpub-tab" data-bs-toggle="pill" data-bs-target="#v-pills-izinpub" type="button" role="tab" aria-controls="v-pills-izinpub" aria-selected="true" style="text-align: left">
+                    Rekomendasi Izin PUB
+                  </button>
+                  <button class="nav-link" id="v-pills-opslks-tab" data-bs-toggle="pill" data-bs-target="#v-pills-opslks" type="button" role="tab" aria-controls="v-pills-opslks" aria-selected="false" style="text-align: left">
+                    Rekomendasi Izin Operasional LKS
+                  </button>
+                  <button class="nav-link" id="v-pills-daftarlks-tab" data-bs-toggle="pill" data-bs-target="#v-pills-daftarlks" type="button" role="tab" aria-controls="v-pills-daftarlks" aria-selected="false" style="text-align: left">
+                    Rekomendasi Tanda Daftar LKS
+                  </button>
+                  <button class="nav-link" id="v-pills-suketdtks-tab" data-bs-toggle="pill" data-bs-target="#v-pills-suketdtks" type="button" role="tab" aria-controls="v-pills-suketdtks" aria-selected="false" style="text-align: left">
+                    Surat Keterangan DTKS
+                  </button>
+                  <button class="nav-link" id="v-pills-tapinmesra-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tapinmesra" type="button" role="tab" aria-controls="v-pills-tapinmesra" aria-selected="false" style="text-align: left">
+                    Suket E-Tapin Mesra
+                  </button>
+                  <button
+                    class="nav-link"
+                    id="v-pills-uepdisabilitas-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-uepdisabilitas"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-uepdisabilitas"
+                    aria-selected="false"
+                    style="text-align: left"
+                  >
+                    Bantuan Sosial Usaha Ekonomi Produktif Disabilitas
+                  </button>
+                  <button class="nav-link" id="v-pills-uepmiskin-tab" data-bs-toggle="pill" data-bs-target="#v-pills-uepmiskin" type="button" role="tab" aria-controls="v-pills-uepmiskin" aria-selected="false" style="text-align: left">
+                    Bantuan Sosial Usaha Ekonomi Produktif Keluarga Miskin
+                  </button>
+                  <button class="nav-link" id="v-pills-bencana-tab" data-bs-toggle="pill" data-bs-target="#v-pills-bencana" type="button" role="tab" aria-controls="v-pills-bencana" aria-selected="false" style="text-align: left">
+                    Bantuan Sosial Korban Bencana
+                  </button>
+                  <button class="nav-link" id="v-pills-latar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-latar" type="button" role="tab" aria-controls="v-pills-latar" aria-selected="false" style="text-align: left">
+                    Bantuan Sosial Lansia Terlantar
+                  </button>
+                  <button class="nav-link" id="v-pills-distar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-distar" type="button" role="tab" aria-controls="v-pills-distar" aria-selected="false" style="text-align: left">
+                    Bantuan Sosial Disabilitas Terlantar
+                  </button>
+                  <button class="nav-link" id="v-pills-tapinmesra-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tapinmesra" type="button" role="tab" aria-controls="v-pills-tapinmesra" aria-selected="false" style="text-align: left">
+                    Suket E-Tapin Mesra
+                  </button>
+                  <button class="nav-link" id="v-pills-tapinmesra-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tapinmesra" type="button" role="tab" aria-controls="v-pills-tapinmesra" aria-selected="false" style="text-align: left">
+                    Suket E-Tapin Mesra
+                  </button>
+                </div>
+
+                <div class="tab-content" id="v-pills-tabContent">
+                  <div class="tab-pane fade show active" id="v-pills-izinpub" role="tabpanel" aria-labelledby="v-pills-izinpub-tab" tabindex="0">
+                    <div class="row">
+                      <img src="../asset/gambar produk/9 SYARAT SURAT REKOM IZIN PUB.png" alt="1" class="w-100" />
+                    </div>
+                    <div class="row mt-2">
+                      <img src="../asset/gambar produk/9 ALUR SURAT REKOM IZIN PUB.png" alt="1" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-opslks" role="tabpanel" aria-labelledby="v-pills-opslks-tab" tabindex="0">
+                    <div class="row">
+                      <img src="../asset/gambar produk/8 SYARAT REKOM IZIN OPS LKS.png" alt="1" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-daftarlks" role="tabpanel" aria-labelledby="v-pills-daftarlks-tab" tabindex="0">
+                    <div class="row">
+                      <img src="../asset/gambar produk/10 SYARAT SURAT REKOM TANDA DAFTAR LKS.png" alt="1" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-suketdtks" role="tabpanel" aria-labelledby="v-pills-suketdtks-tab" tabindex="0">
+                    <div class="row">
+                      <img src="../asset/gambar produk/6 SYARAT PENERBITAN SUKET DTKS.png" alt="1" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-tapinmesra" role="tabpanel" aria-labelledby="v-pills-tapinmesra-tab" tabindex="0">
+                    <div class="row">
+                      <img src="../asset/gambar produk/7 SYARAT PENERBITAN SUKET E-TAPIN MESRA.png" alt="1" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-uepdisabilitas" role="tabpanel" aria-labelledby="v-pills-uepdisabilitas-tab" tabindex="0">
+                    <div class="row">
+                      <img src="../asset/gambar produk/11 SYARAT BANTUAN UEP DISABILITAS.png" alt="1" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-uepmiskin" role="tabpanel" aria-labelledby="v-pills-uepmiskin-tab" tabindex="0">
+                    <div class="row">
+                      <img src="../asset/gambar produk/12 SYARAT BANTUAN UEP KELUARGA MISKIN.png" alt="1" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-bencana" role="tabpanel" aria-labelledby="v-pills-bencana-tab" tabindex="0">
+                    <div class="row">
+                      <img src="../asset/gambar produk/5 SYARAT BANSOS BAGI KORBAN BENCANA.png" alt="1" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-latar" role="tabpanel" aria-labelledby="v-pills-latar-tab" tabindex="0">
+                    <div class="row">
+                      <img src="../asset/gambar produk/2 SYARAT BANTUAN SOSIAL LANJUT USIA TERLANTAR.png" alt="1" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-distar" role="tabpanel" aria-labelledby="v-pills-distar-tab" tabindex="0">
+                    <div class="row">
+                      <img src="../asset/gambar produk/4 SYARAT BANSOS PENYANDANG DISABILITAS TERLANTAR.png" alt="1" class="w-100" />
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-tapinmesra" role="tabpanel" aria-labelledby="v-pills-tapinmesra-tab" tabindex="0">
+                    <div class="row">
+                      <div class="col">
+                        <img src="" alt="1" class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-tapinmesra" role="tabpanel" aria-labelledby="v-pills-tapinmesra-tab" tabindex="0">
+                    <div class="row">
+                      <div class="col">
+                        <img src="" alt="1" class="w-100" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <section class="kekiri" id="kekiri"></section>
+        </div>
+      </div>
+    </div>
+
+    <!-- berita dan galeri -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-9"><section class="berita" id="berita"></section></div>
+        <div class="col-sm-3"><section class="galeri" id="galeri"></section></div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <section class="footer mt-3" id="footer"></section>
+
+    <!-- KUMPULAN SCRIPT -->
+    <script>
+      const navigasi = document.getElementById("navigasi");
+      const kekiri = document.getElementById("kekiri");
+      const berita = document.getElementById("berita");
+      const galeri = document.getElementById("galeri");
+      const footer = document.getElementById("footer");
+
+      // navigasi
+      fetch("../bagian/navigasi.html").then(function (snap) {
+        snap.text().then(function (result) {
+          navigasi.innerHTML = result;
+        });
+      });
+      // Konten Kiri
+      fetch("../bagian/konten kiri.html").then(function (snap) {
+        snap.text().then(function (result) {
+          kekiri.innerHTML = result;
+        });
+      });
+      // berita
+      fetch("../bagian/kolom berita.html").then(function (snap) {
+        snap.text().then(function (result) {
+          berita.innerHTML = result;
+        });
+      });
+
+      // galeri
+      fetch("../bagian/galeri2.html").then(function (snap) {
+        snap.text().then(function (result) {
+          galeri.innerHTML = result;
+        });
+      });
+
+      // footer
+      fetch("../bagian/footer.html").then(function (snap) {
+        snap.text().then(function (result) {
+          footer.innerHTML = result;
+        });
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+  </body>
+</html>
