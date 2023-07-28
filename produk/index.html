@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap");
       @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
@@ -13,153 +12,134 @@
       * {
         font-family: "Instrument Sans", sans-serif;
       }
-
       body {
         padding: 0;
         margin: 0;
       }
-
       .navigation a {
         color: #0a0a0a !important;
       }
+      .list-group {
+        position: sticky;
+        top: 180px; /* Adjust the top value to set the desired distance from the top */
+        height: calc(100vh - 100px); /* Adjust the height to fit the available viewport */
+        overflow-y: auto; /* Enable vertical scrolling if the content exceeds the height */
+      }
+      .sticky-title {
+        position: sticky;
+        top: 67px; /* Atur nilai top sesuai kebutuhan */
+        background-color: white; /* Atur latar belakang sesuai kebutuhan */
+        padding: 10px; /* Atur padding sesuai kebutuhan */
+      }
+      #list-item-1.active {
+        margin-top: 500px;
+      }
+      #kekiri {
+        position: sticky;
+        top: 180px; /* Adjust the top value to set the desired distance from the top */
+        height: calc(100vh - 100px); /* Adjust the height to fit the available viewport */
+      }
     </style>
-
     <title>Website Resmi Dinas Sosial Kab. Tapin</title>
   </head>
-
   <body>
     <!-- navigasi bar -->
-    <section class="navigasi" id="navigasi"></section>
-    <div style="margin-top: 100px"></div>
+    <section class="navigation" id="navigasi"></section>
 
+    <div style="margin-top: 67px"></div>
     <div class="container-fluid">
-      <div class="row px-2">
-        <div class="col-sm-9 mb-3 text-center">
-          <div class="row">
-            <div class="col">
-              <div class="alert fw-bold" style="border: 0; background-color: rgb(229, 247, 229)"><h3>PRODUK STANDAR PELAYANAN</h3></div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <div class="d-flex align-items-start">
-                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                  <button class="nav-link active" id="v-pills-izinpub-tab" data-bs-toggle="pill" data-bs-target="#v-pills-izinpub" type="button" role="tab" aria-controls="v-pills-izinpub" aria-selected="true" style="text-align: left">
-                    Rekomendasi Izin PUB
-                  </button>
-                  <button class="nav-link" id="v-pills-opslks-tab" data-bs-toggle="pill" data-bs-target="#v-pills-opslks" type="button" role="tab" aria-controls="v-pills-opslks" aria-selected="false" style="text-align: left">
-                    Rekomendasi Izin Operasional LKS
-                  </button>
-                  <button class="nav-link" id="v-pills-daftarlks-tab" data-bs-toggle="pill" data-bs-target="#v-pills-daftarlks" type="button" role="tab" aria-controls="v-pills-daftarlks" aria-selected="false" style="text-align: left">
-                    Rekomendasi Tanda Daftar LKS
-                  </button>
-                  <button class="nav-link" id="v-pills-suketdtks-tab" data-bs-toggle="pill" data-bs-target="#v-pills-suketdtks" type="button" role="tab" aria-controls="v-pills-suketdtks" aria-selected="false" style="text-align: left">
-                    Surat Keterangan DTKS
-                  </button>
-                  <button class="nav-link" id="v-pills-tapinmesra-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tapinmesra" type="button" role="tab" aria-controls="v-pills-tapinmesra" aria-selected="false" style="text-align: left">
-                    Suket E-Tapin Mesra
-                  </button>
-                  <button
-                    class="nav-link"
-                    id="v-pills-uepdisabilitas-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-uepdisabilitas"
-                    type="button"
-                    role="tab"
-                    aria-controls="v-pills-uepdisabilitas"
-                    aria-selected="false"
-                    style="text-align: left"
-                  >
-                    Bantuan Sosial Usaha Ekonomi Produktif Disabilitas
-                  </button>
-                  <button class="nav-link" id="v-pills-uepmiskin-tab" data-bs-toggle="pill" data-bs-target="#v-pills-uepmiskin" type="button" role="tab" aria-controls="v-pills-uepmiskin" aria-selected="false" style="text-align: left">
-                    Bantuan Sosial Usaha Ekonomi Produktif Keluarga Miskin
-                  </button>
-                  <button class="nav-link" id="v-pills-bencana-tab" data-bs-toggle="pill" data-bs-target="#v-pills-bencana" type="button" role="tab" aria-controls="v-pills-bencana" aria-selected="false" style="text-align: left">
-                    Bantuan Sosial Korban Bencana
-                  </button>
-                  <button class="nav-link" id="v-pills-latar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-latar" type="button" role="tab" aria-controls="v-pills-latar" aria-selected="false" style="text-align: left">
-                    Bantuan Sosial Lansia Terlantar
-                  </button>
-                  <button class="nav-link" id="v-pills-distar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-distar" type="button" role="tab" aria-controls="v-pills-distar" aria-selected="false" style="text-align: left">
-                    Bantuan Sosial Disabilitas Terlantar
-                  </button>
-                  <button class="nav-link" id="v-pills-tapinmesra-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tapinmesra" type="button" role="tab" aria-controls="v-pills-tapinmesra" aria-selected="false" style="text-align: left">
-                    Suket E-Tapin Mesra
-                  </button>
-                  <button class="nav-link" id="v-pills-tapinmesra-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tapinmesra" type="button" role="tab" aria-controls="v-pills-tapinmesra" aria-selected="false" style="text-align: left">
-                    Suket E-Tapin Mesra
-                  </button>
+      <div class="row sticky-title">
+        <div class="alert fw-bold" style="border: 0; background-color: rgb(229, 247, 229)"><h3>PRODUK STANDAR PELAYANAN</h3></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="container">
+            <div class="row">
+              <div class="col-4">
+                <div id="list-example" class="list-group">
+                  <a class="list-group-item list-group-item-action" href="#satu">EKOMENDASI IZIN PENGUMPULAN UANG DAN BARANG (P U B)</a>
+                  <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+                  <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+                  <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
                 </div>
-
-                <div class="tab-content" id="v-pills-tabContent">
-                  <div class="tab-pane fade show active" id="v-pills-izinpub" role="tabpanel" aria-labelledby="v-pills-izinpub-tab" tabindex="0">
-                    <div class="row">
-                      <img src="../asset/gambar produk/9 SYARAT SURAT REKOM IZIN PUB.png" alt="1" class="w-100" />
+              </div>
+              <div class="col-8">
+                <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                  <h4 id="satu"></h4>
+                  <p>
+                    <img src="../asset/gambar produk/1 SYARAT SURAT REKOM IZIN PUB.png" alt="1" class="w-100" />
+                  </p>
+                  <p>
+                    <img src="../asset/gambar produk/1 ALUR SURAT REKOM IZIN PUB.png" alt="1" class="w-100" />
+                  </p>
+                  <p>
+                    <div class="ratio ratio-16x9 bg-info">
+                      <embed src="../asset/file pdf/1 SURAT REKOMENDASI IZIN PENGUMPULAN UANG ATAU BARANG (PUB).pdf" type="application/pdf" width="100%" height="600px" />
                     </div>
-                    <div class="row mt-2">
-                      <img src="../asset/gambar produk/9 ALUR SURAT REKOM IZIN PUB.png" alt="1" class="w-100" />
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-opslks" role="tabpanel" aria-labelledby="v-pills-opslks-tab" tabindex="0">
-                    <div class="row">
-                      <img src="../asset/gambar produk/8 SYARAT REKOM IZIN OPS LKS.png" alt="1" class="w-100" />
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-daftarlks" role="tabpanel" aria-labelledby="v-pills-daftarlks-tab" tabindex="0">
-                    <div class="row">
-                      <img src="../asset/gambar produk/10 SYARAT SURAT REKOM TANDA DAFTAR LKS.png" alt="1" class="w-100" />
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-suketdtks" role="tabpanel" aria-labelledby="v-pills-suketdtks-tab" tabindex="0">
-                    <div class="row">
-                      <img src="../asset/gambar produk/6 SYARAT PENERBITAN SUKET DTKS.png" alt="1" class="w-100" />
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-tapinmesra" role="tabpanel" aria-labelledby="v-pills-tapinmesra-tab" tabindex="0">
-                    <div class="row">
-                      <img src="../asset/gambar produk/7 SYARAT PENERBITAN SUKET E-TAPIN MESRA.png" alt="1" class="w-100" />
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-uepdisabilitas" role="tabpanel" aria-labelledby="v-pills-uepdisabilitas-tab" tabindex="0">
-                    <div class="row">
-                      <img src="../asset/gambar produk/11 SYARAT BANTUAN UEP DISABILITAS.png" alt="1" class="w-100" />
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-uepmiskin" role="tabpanel" aria-labelledby="v-pills-uepmiskin-tab" tabindex="0">
-                    <div class="row">
-                      <img src="../asset/gambar produk/12 SYARAT BANTUAN UEP KELUARGA MISKIN.png" alt="1" class="w-100" />
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-bencana" role="tabpanel" aria-labelledby="v-pills-bencana-tab" tabindex="0">
-                    <div class="row">
-                      <img src="../asset/gambar produk/5 SYARAT BANSOS BAGI KORBAN BENCANA.png" alt="1" class="w-100" />
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-latar" role="tabpanel" aria-labelledby="v-pills-latar-tab" tabindex="0">
-                    <div class="row">
-                      <img src="../asset/gambar produk/2 SYARAT BANTUAN SOSIAL LANJUT USIA TERLANTAR.png" alt="1" class="w-100" />
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-distar" role="tabpanel" aria-labelledby="v-pills-distar-tab" tabindex="0">
-                    <div class="row">
-                      <img src="../asset/gambar produk/4 SYARAT BANSOS PENYANDANG DISABILITAS TERLANTAR.png" alt="1" class="w-100" />
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-tapinmesra" role="tabpanel" aria-labelledby="v-pills-tapinmesra-tab" tabindex="0">
-                    <div class="row">
-                      <div class="col">
-                        <img src="" alt="1" class="w-100" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-tapinmesra" role="tabpanel" aria-labelledby="v-pills-tapinmesra-tab" tabindex="0">
-                    <div class="row">
-                      <div class="col">
-                        <img src="" alt="1" class="w-100" />
-                      </div>
-                    </div>
-                  </div>
+                  </p>
+                  <h4 id="list-item-2">Item 2</h4>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod quasi nostrum perferendis ratione consectetur aperiam tempora quis ipsam dolorem numquam mollitia, nemo labore quidem corrupti enim voluptatum accusantium
+                    maiores, earum ea ducimus delectus dolor debitis at. Amet et quam, autem sunt aliquid iste praesentium facere asperiores sequi dicta, iusto, qui earum cupiditate facilis animi sapiente corrupti sit quos optio
+                    necessitatibus cum debitis temporibus numquam! Delectus fugit quo quas ab tempore dignissimos perspiciatis, suscipit omnis, fuga reiciendis quasi. Dicta debitis placeat mollitia provident quaerat. Molestias, eveniet
+                    ratione soluta commodi nulla aliquid reiciendis doloribus eius unde architecto rerum ab quibusdam optio repudiandae quaerat neque. Vitae incidunt qui ullam, omnis porro reiciendis dignissimos ut enim alias sit cum
+                    tempore dolorum culpa aperiam beatae doloribus nam rerum voluptatibus. Ratione harum facere ullam reprehenderit nisi tempora necessitatibus, praesentium possimus delectus natus suscipit dolore ea totam, quam, aliquid aut
+                    tenetur optio cupiditate cum temporibus dicta. Voluptas nobis blanditiis provident deleniti totam ratione culpa incidunt inventore voluptatum tempora perferendis sed itaque numquam modi quis libero dolorem est harum
+                    minus amet id explicabo, hic suscipit error. Dolorem recusandae corporis consequatur a enim reiciendis quia sint doloremque quo fuga et sunt velit delectus culpa, pariatur nobis rem, ab vero autem? Placeat doloremque, ad
+                    dignissimos quaerat, minima molestiae quas cum fugit tenetur accusamus eveniet libero, facere magni nobis eos velit dolorem recusandae asperiores fuga totam. Laudantium praesentium numquam quia doloremque fugit nam
+                    commodi ex voluptatibus. Voluptates sed aut voluptatibus repudiandae consequuntur laboriosam enim architecto a mollitia. Assumenda eaque odio debitis voluptatum enim inventore, ipsum sunt? Facilis ad vel deleniti,
+                    officia dolores voluptate. Quibusdam nemo, quaerat dicta rem sit optio sapiente sint libero, qui, ducimus harum non quidem tenetur error doloremque natus facilis mollitia a nam neque facere voluptatibus voluptatum!
+                    Aspernatur obcaecati earum numquam rem voluptatum atque corporis, aliquid accusamus repellendus expedita, nisi nulla mollitia esse quo? Cum sed odio reiciendis rerum totam. Alias placeat hic quasi fugit a dolores
+                    sapiente vitae nobis temporibus praesentium, cumque animi maiores exercitationem facere repudiandae commodi necessitatibus maxime reiciendis sequi quisquam. Ducimus nesciunt excepturi quam perspiciatis facere cum sint
+                    sed reiciendis, minima fugiat eum unde ipsam odio est ab velit magnam. Architecto, optio ipsa quae sint aliquam eveniet, provident blanditiis voluptatum corporis commodi, harum reprehenderit ut. Debitis, et dolor.
+                    Delectus accusamus totam dolore nesciunt itaque autem, amet molestias eius assumenda deleniti quibusdam, a voluptate omnis temporibus est odio. Deserunt, deleniti sequi. Numquam nemo suscipit atque enim quis voluptate
+                    deserunt in saepe illum error modi magnam, animi dicta. Quod in optio ex beatae nulla nostrum repudiandae quae provident a dolore odit vitae alias tempore, repellat totam distinctio nihil. Enim repellendus quidem ipsam
+                    recusandae eaque, odit maxime explicabo fuga excepturi, rem minus esse iusto deleniti expedita debitis pariatur placeat! Doloribus nostrum odit sed nisi fugit obcaecati, et, possimus voluptatibus sit officia quaerat
+                    tenetur error aliquam. Doloribus labore quo mollitia quos delectus. Placeat adipisci aliquid repellat veniam vel quos recusandae ea sit laboriosam, iure sint quisquam minima sequi facere laudantium dicta deserunt
+                    reiciendis ipsa! Fugiat optio est natus.
+                  </p>
+                  <h4 id="list-item-3">Item 3</h4>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos ab amet minima nisi dolores perferendis, dolorem, impedit molestiae laudantium repudiandae, perspiciatis quas. At, nemo in dignissimos unde quasi quidem,
+                    dolore doloribus quas soluta voluptatum iste repellendus iure. Numquam, aperiam tempora corrupti vel inventore reiciendis eius voluptas cupiditate delectus ad officiis odit necessitatibus expedita aliquam molestias
+                    consectetur enim deleniti quis blanditiis dolores aut doloremque perferendis autem. Laudantium nisi repudiandae iure magnam odit! Voluptatem illum, veritatis molestiae esse quae enim laborum aspernatur facere quasi odit
+                    explicabo libero debitis nesciunt atque exercitationem. Minus reiciendis dolores id numquam quo hic quis impedit officiis. Nam neque itaque rerum inventore sit exercitationem explicabo, dolor facilis nemo ut, aliquam a
+                    fugit nihil harum quibusdam esse sunt quaerat non atque? Quia, officia veniam consequatur totam eligendi minima sit architecto deserunt praesentium ratione qui amet, pariatur nemo sunt, quas accusantium delectus dolores
+                    eius distinctio. Aliquam perspiciatis facere adipisci saepe sint obcaecati quia ea quod ipsam eius. Unde totam dolore dolores corrupti amet fugit voluptatibus adipisci! Mollitia accusantium labore quae rerum, incidunt
+                    dolorum, numquam totam unde vero eius odio quia. Assumenda facere rerum asperiores incidunt officiis corrupti tempore eum fugiat a saepe! Totam cupiditate animi magnam quas magni numquam qui eaque fuga deleniti incidunt
+                    earum provident laborum fugit iste expedita, vitae enim soluta reiciendis assumenda explicabo eius, iure impedit. Accusantium, magnam voluptatum corporis voluptas rerum quo commodi beatae, dolores minus animi minima
+                    dolorem ipsa ab consequatur numquam molestias eveniet sint atque amet impedit alias! Sequi, cum necessitatibus veniam mollitia harum maxime, molestiae accusantium corrupti neque laudantium voluptatibus iste fuga fugit
+                    nulla ipsam, eveniet assumenda quas numquam dolorum et sint ullam labore hic facilis. Aperiam perferendis corrupti aliquid quo voluptatem quia vitae quasi incidunt sint, maxime exercitationem cupiditate distinctio
+                    voluptas impedit perspiciatis recusandae fuga nesciunt soluta. Ullam, suscipit ratione expedita, architecto, obcaecati nemo enim recusandae vel dolorem ex totam unde. Eaque et facilis, saepe earum itaque quibusdam
+                    assumenda autem reprehenderit, commodi harum velit accusantium voluptatem fuga blanditiis natus vel est eligendi maiores repellat doloribus numquam obcaecati, nemo dolor? Perspiciatis autem esse recusandae dolore error
+                    hic vitae nesciunt laboriosam blanditiis, adipisci quaerat minus dolorem quas, provident dolores earum eos. Illum ipsum ratione maiores quidem dolore voluptas eius modi numquam distinctio, recusandae debitis! Cumque
+                    beatae nostrum ullam natus! In, dolore! Rerum, minus exercitationem. Repellat magni facere a. Cupiditate, rerum ullam eligendi iusto porro odit possimus recusandae quo eaque itaque? Omnis voluptatum maiores ex. Earum sit
+                    consequatur cumque dicta minima nulla reprehenderit numquam fugiat, at adipisci sequi ipsam, repellendus, amet possimus voluptatibus tempore voluptatum obcaecati ratione dolorum nisi dolores explicabo. Atque error, odio
+                    laudantium quasi quos, impedit id nisi nulla suscipit ipsum ex magnam sunt aspernatur debitis rerum explicabo minima, dolores nostrum quo tenetur harum animi inventore quaerat. Tempora in quam fugit perferendis
+                    consequatur recusandae cupiditate voluptates quia amet dolores dicta officiis, quis aperiam nisi accusantium molestiae iusto. Odit nam optio veritatis cumque dolorem quod tempore iure suscipit eligendi laboriosam modi
+                    quas eius, perferendis architecto! Aliquid minus incidunt quis alias sit quae. Atque, et.
+                  </p>
+                  <h4 id="list-item-4">Item 4</h4>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat omnis vel ratione dicta, hic obcaecati atque ducimus magnam ut, expedita deleniti tempora veritatis nihil eum neque! Reprehenderit, molestias quidem
+                    numquam voluptatibus, accusamus, blanditiis quod unde nihil laudantium nisi harum! Minus vel dolor consequatur corrupti sequi eum itaque omnis laboriosam quibusdam beatae harum quaerat officia soluta delectus est
+                    obcaecati neque, eaque, dolorem, qui debitis quos. Nisi rerum impedit assumenda. Deleniti nihil obcaecati nam, velit ipsam ducimus, labore vero impedit ut, ratione pariatur iste magni reprehenderit ad laboriosam. Unde
+                    sint officiis, itaque quibusdam pariatur consequuntur natus! Ipsa aperiam obcaecati veniam quos, unde molestiae dolore accusantium, eaque possimus magni tempore ex eum, quam officia praesentium dolorem. Soluta,
+                    voluptatem. Voluptates magni quaerat nihil odio id! Nostrum accusamus enim fugiat doloribus excepturi velit tenetur cumque veritatis? Vitae accusamus sit repellendus, quasi rerum animi ullam provident alias consectetur
+                    rem iste adipisci, exercitationem quae et. Vero labore et optio inventore veniam? Repellat, necessitatibus. Quod explicabo nulla debitis, dicta sit enim unde earum id ducimus corporis incidunt blanditiis doloremque
+                    magni, dolore soluta aliquam minima perspiciatis maxime at modi consectetur. Dignissimos nam aliquam, non excepturi deleniti fugit itaque atque ad culpa minima delectus rem quam, nemo provident molestiae harum voluptatum
+                    accusamus omnis repellendus eligendi ex, dolores magnam cupiditate. Corporis perspiciatis sit, hic ea ipsa, soluta aspernatur reprehenderit id excepturi ipsum molestias, dolorem deleniti necessitatibus voluptatibus illum
+                    quisquam commodi blanditiis repudiandae! Quam doloremque dignissimos eligendi voluptatum labore iste voluptate ipsa quidem, consequuntur accusamus exercitationem harum quas! Excepturi porro velit nulla rem dolorem
+                    aliquid consectetur sint esse, ratione tempora eligendi delectus culpa maxime illo odio nam quia! Vitae eaque doloribus quod non dolores nostrum ea maiores quibusdam, repudiandae eum cumque odio! Voluptate ab nesciunt
+                    asperiores quia exercitationem accusamus officiis, reiciendis vel nam eum error blanditiis quo sequi, veritatis tenetur culpa ullam ut ea esse beatae minus provident corporis dicta. Officia praesentium id quos
+                    repudiandae minus nulla, voluptates veritatis eaque veniam quo vitae error. Nisi placeat nulla eveniet facilis fuga soluta voluptatibus debitis adipisci ipsam nemo? Dicta ex nisi ut, repellat officia excepturi quod culpa
+                    dolore ullam ad odit incidunt error quidem ipsum doloribus suscipit alias quasi sint tempora sunt, itaque modi? Molestias, quidem dolore sapiente rerum aliquam cumque dolor totam impedit eum omnis laborum repellat
+                    maxime? Fugit, voluptatum quisquam sequi autem aliquid minima esse quae ipsum impedit sunt commodi quasi unde repellat nam magni laudantium. Magni, laudantium eum at nulla illum labore rem natus illo nesciunt inventore
+                    reprehenderit repellendus quis, dolorem itaque odio? Quis tenetur voluptatem eaque at non fuga quae, fugiat repudiandae, deleniti odio aliquid magni ut! Facere rerum eaque quaerat perspiciatis autem accusantium adipisci
+                    non ipsa veniam assumenda, error corporis vel repellendus asperiores deleniti dicta. Eius a quidem soluta ab similique, corrupti explicabo odit earum dolorum quos? Sapiente debitis impedit molestiae ex natus officia
+                    distinctio autem similique eveniet nisi asperiores voluptates atque magni odit, dolor blanditiis error eum, magnam voluptatem commodi! Accusantium amet maiores quam ut odio, soluta odit distinctio quos quia nostrum
+                    deleniti ab aspernatur deserunt similique obcaecati.
+                  </p>
                 </div>
               </div>
             </div>
@@ -174,8 +154,12 @@
     <!-- berita dan galeri -->
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-9"><section class="berita" id="berita"></section></div>
-        <div class="col-sm-3"><section class="galeri" id="galeri"></section></div>
+        <div class="col-sm-9">
+          <section class="berita" id="berita"></section>
+        </div>
+        <div class="col-sm-3">
+          <section class="galeri" id="galeri"></section>
+        </div>
       </div>
     </div>
 
@@ -189,7 +173,6 @@
       const berita = document.getElementById("berita");
       const galeri = document.getElementById("galeri");
       const footer = document.getElementById("footer");
-
       // navigasi
       fetch("../bagian/navigasi.html").then(function (snap) {
         snap.text().then(function (result) {
@@ -208,14 +191,12 @@
           berita.innerHTML = result;
         });
       });
-
       // galeri
       fetch("../bagian/galeri2.html").then(function (snap) {
         snap.text().then(function (result) {
           galeri.innerHTML = result;
         });
       });
-
       // footer
       fetch("../bagian/footer.html").then(function (snap) {
         snap.text().then(function (result) {
@@ -223,8 +204,52 @@
         });
       });
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const listItems = document.querySelectorAll(".list-group-item");
+
+        listItems.forEach(function (item) {
+          item.addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah perilaku gulir default
+
+            const targetId = item.getAttribute("href"); // Dapatkan ID target dari atribut href
+            const targetElement = document.querySelector(targetId); // Temukan elemen target
+
+            const offset = parseInt(item.getAttribute("data-bs-offset") || "0"); // Ambil nilai offset dari atribut data-bs-offset
+
+            // Gulir ke elemen target dengan lancar dan tambahkan offset
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+              inline: "nearest",
+              offsetTop: offset,
+            });
+          });
+        });
+      });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const listItems = document.querySelectorAll(".list-group-item");
+
+        listItems.forEach(function (item) {
+          item.addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah perilaku gulir default
+            const targetId = item.getAttribute("href"); // Dapatkan ID target dari atribut href
+            const targetElement = document.querySelector(targetId); // Temukan elemen target
+
+            // Gulir ke elemen target dengan lancar
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+              inline: "nearest",
+            });
+          });
+        });
+      });
+    </script>
   </body>
 </html>
