@@ -35,41 +35,21 @@
     <div class="container-fluid">
       <div class="row px-2">
         <div class="col-sm-9 mb-3">
-          
-          <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
-            </li>
-          </ul>
-      
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"><img src="../asset/image/visi dan misi.png" alt="visi1" class="w-50" /></div>
-            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"><img src="../asset/image/struktur.png" alt="struk" class="w-50" /></div>
-            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">Contact content goes here...</div>
-            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">Disabled content goes here...</div>
+          <div class="row">
+            <div class="card" style="background-color: azure;">
+              <div class="card-body text-center">
+                <section class="layanan" id="layanan"></section>
+              </div>
+            </div>
           </div>
-
+          <div class="row mt-4"><section class="berita" id="berita"></section></div>
+            
         </div>
-        <div class="col-sm-3">
-          <section class="kekiri" id="kekiri"></section>
+        <div class="col-sm-3 mt-5">
+          <div class="row"><section class="kekiri" id="kekiri"></section></div>
+          <div class="row"><section class="galeri" id="galeri"></section></div>
+          
         </div>
-      </div>
-    </div>
-
-    <!-- berita dan galeri -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-9"><section class="berita" id="berita"></section></div>
-        <div class="col-sm-3"><section class="galeri" id="galeri"></section></div>
       </div>
     </div>
 
@@ -79,6 +59,7 @@
     <!-- KUMPULAN SCRIPT -->
     <script>
       const navigasi = document.getElementById("navigasi");
+      const layanan = document.getElementById("layanan");
       const kekiri = document.getElementById("kekiri");
       const berita = document.getElementById("berita");
       const galeri = document.getElementById("galeri");
@@ -88,6 +69,12 @@
       fetch("../bagian/navigasi.html").then(function (snap) {
         snap.text().then(function (result) {
           navigasi.innerHTML = result;
+        });
+      });
+      // Informasi Pelayanan
+      fetch("info layanan.html").then(function (snap) {
+        snap.text().then(function (result) {
+          layanan.innerHTML = result;
         });
       });
       // Konten Kiri

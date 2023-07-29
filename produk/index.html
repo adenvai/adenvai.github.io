@@ -22,16 +22,6 @@
       .navigation a {
         color: #0a0a0a !important;
       }
-      .card {
-        position: sticky;
-        top: 80px;
-        overflow-y: auto;
-      }
-      #aa {
-        position: sticky;
-        top: 80px;
-        height: calc(100vh - 100px);
-      }
     </style>
 
     <title>Website Resmi Dinas Sosial Kab. Tapin</title>
@@ -40,25 +30,47 @@
   <body>
     <!-- navigasi bar -->
     <section class="navigasi" id="navigasi"></section>
-    <!-- <div class="div" style="margin-top: 80px"></div> -->
+    <div style="margin-top: 80px"></div>
 
-    <div class="container-fluid" style="height: 1360px">
-      <div class="row px-2">
-        <div class="col-sm-9 mt-5">
-          <section class="produk" id="produk"></section>
+    <div class="container-fluid">
+      <div class="row mt-5">
+        <div class="col-sm-9">
+          <div class="alert fw-bold text-center" style="border: 0; background-color: rgb(229, 247, 229)">12 STANDAR LAYANAN SLRT DINAS SOSIAL KAB. TAPIN</div>
         </div>
-        <div class="col-sm-3 mt-5" id="aa">
-          <div class="row"><section class="kekiri" id="kekiri"></section></div>
-          <div class="row"><img src="../asset/image/produk.jpeg" alt="" /></div>
+      </div>
+      <div class="row px-2">
+        <div class="col-sm-9 mb-3">
+          <div class="row">
+            <div class="col">
+              <div class="card" style="border: 0; background-color: rgb(248, 249, 249)">
+                <div class="card-body">
+                  <section class="layanan" id="layanan"></section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col">
+              <section class="galeri" id="galeri"></section>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="row">
+            <div class="card" style="border: 0; background-color: rgb(248, 249, 249)">
+              <div class="card-body"><section class="kekiri" id="kekiri"></section></div>
+            </div>
+          </div>
+          <div class="row mt-4"><section class="berita" id="berita"></section></div>
         </div>
       </div>
     </div>
 
-    <!--berita dan galeri -->
+    <!-- berita dan galeri -->
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-9"><section class="berita" id="berita"></section></div>
-        <div class="col-sm-3"><section class="galeri" id="galeri"></section></div>
+        <div class="col-sm-9"></div>
+        <div class="col-sm-3"></div>
       </div>
     </div>
 
@@ -68,7 +80,7 @@
     <!-- KUMPULAN SCRIPT -->
     <script>
       const navigasi = document.getElementById("navigasi");
-      const produk = document.getElementById("produk");
+      const layanan = document.getElementById("layanan");
       const kekiri = document.getElementById("kekiri");
       const berita = document.getElementById("berita");
       const galeri = document.getElementById("galeri");
@@ -80,27 +92,30 @@
           navigasi.innerHTML = result;
         });
       });
-      // produk
+
+      // Produk layanan
       fetch("produk layanan.html").then(function (snap) {
         snap.text().then(function (result) {
-          produk.innerHTML = result;
+          layanan.innerHTML = result;
         });
       });
+
       // Konten Kiri
       fetch("../bagian/konten kiri.html").then(function (snap) {
         snap.text().then(function (result) {
           kekiri.innerHTML = result;
         });
       });
-      // berita sebelah kiri
-      fetch("../bagian/kolom berita.html").then(function (snap) {
+
+      // berita
+      fetch("../bagian/berita kiri.html").then(function (snap) {
         snap.text().then(function (result) {
           berita.innerHTML = result;
         });
       });
 
       // galeri
-      fetch("../bagian/galeri2.html").then(function (snap) {
+      fetch("../bagian/galeri.html").then(function (snap) {
         snap.text().then(function (result) {
           galeri.innerHTML = result;
         });
