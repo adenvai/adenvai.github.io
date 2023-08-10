@@ -22,36 +22,294 @@
 
     <title>Website Resmi Dinas Sosial Kab. Tapin</title>
   </head>
-  <div class="container text-center mt-5">
-    <div class="row align-items-start">
-      <div class="col mb-5">FORM SURVEY KEPUASAN MASYARAKAT</div>
-    </div>
-    <div class="row text-start">
-      <form>
+
+  <body class="bg-warning-subtle">
+    <div class="container text-center bg-success-subtle mt-5 py-3 fw-bold rounded-2">SURVEY KEPUASAN MASYARAKAT</div>
+    <div class="container bg-dark-subtle mt-3 mb-5 px-5 py-4 rounded-3">
+      <form action="" class="ikm">
         <div class="row">
-          <div class="col-sm-3">
+          <div class="col-sm-12 col-lg-2">
             <label for="nama" class="form-label">Nama Lengkap</label>
           </div>
-          <div class="col-sm-8">
-            <input type="email" class="form-control" id="nama" aria-describedby="emailHelp" />
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          <div class="col-sm-12 col-lg-5">
+            <input type="text" id="nama" class="form-control form-control-sm" />
           </div>
         </div>
 
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" />
+        <div class="row mt-3">
+          <div class="col-sm-12 col-lg-2">
+            <label class="form-check-label" for="jenkel">Jenis Kelamin</label>
+          </div>
+          <div class="col-sm-12 col-lg-auto">
+            <div class="form-check-inline">
+              <input class="form-check-input" type="radio" id="lakilaki" name="jenkel" value="Laki-laki" checked />
+              <label for="form-check-label" class="me-4">Laki-laki</label>
+              <input class="form-check-input" type="radio" id="perempuan" name="jenkel" value="Perempuan" />
+              <label for="form-check-label">Perempuan</label>
+            </div>
+          </div>
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+        <div class="row mt-3">
+          <div class="col-sm-12 col-lg-2">
+            <label class="form-label" for="pendidikan">Pendidikan</label>
+          </div>
+          <div class="col-sm-12 col-lg-3">
+            <select class="form-select form-select-sm" name="pendidikan" id="pendidikan">
+              <option selected>Pilih...</option>
+              <option value="sd">SD/Tidak Lulus</option>
+              <option value="sltp">SLTP</option>
+              <option value="slta">SLTA</option>
+              <option value="diploma">D 3</option>
+              <option value="s-1">S-1</option>
+              <option value="s-2">S-2</option>
+            </select>
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <div class="row mt-3">
+          <div class="col-sm-12 col-lg-2">
+            <label class="form-label" for="pekerjaan">Pekerjaan</label>
+          </div>
+          <div class="col-sm-12 col-lg-3">
+            <select class="form-select form-select-sm" name="pekerjaan" id="pekerjaan">
+              <option selected>Pilih...</option>
+              <option value="tni">TNI</option>
+              <option value="polri">POLRI</option>
+              <option value="pns">PNS</option>
+              <option value="swasta">SWASTA</option>
+              <option value="wirausaha">WIRAUSAHA</option>
+              <option value="lainnya">LAINNYA</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-sm-12 col-lg-2">
+            <label class="form-label" for="layanan">Jenis Layanan</label>
+          </div>
+          <div class="col-sm-12 col-lg-5 mb-sm-3">
+            <input type="text" name="layanan" id="layanan" class="form-control form-control-sm" />
+          </div>
+        </div>
+        <!-- <div class="container-lg-fluid mt-5"> -->
+        <div class="card p-lg-5 p-sm-2 mt-lg-5 mt-sm-5">
+          <ol>
+            <li>
+              <div class="row">
+                <label for="u1" class="form-check-label">Bagaimana pendapat Saudara tentang kesesuaian persyaratan pelayanan dengan jenis layanannya</label>
+              </div>
+              <div class="row mt-2 ms-1">
+                <div class="col-lg-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_satu" id="soal_satu" value="1" />
+                  <label class="form-check-label" for="soal_satu">Tidak Sesuai</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_satu" id="soal_satu" value="2" />
+                  <label class="form-check-label" for="soal_satu">Kurang Sesuai</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_satu" id="soal_satu" value="3" />
+                  <label class="form-check-label" for="soal_satu">Sesuai</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_satu" id="soal_satu" value="4" />
+                  <label class="form-check-label" for="soal_satu">Sangat Sesuai</label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row mt-4">
+                <label for="u1" class="form-check-label">Bagaimana pemahaman Saudara tentang kemudahan prosedur/tahapan pelayanan di Sistem Layanan Rujukan Terpadu (SLRT) pada Dinas Sosial Kabupaten Tapin</label>
+              </div>
+              <div class="row mt-2 ms-1">
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_dua" id="soal_dua" value="1" />
+                  <label class="form-check-label" for="soal_dua">Tidak Mudah</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_dua" id="soal_dua" value="2" />
+                  <label class="form-check-label" for="soal_dua">Kurang Mudah</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_dua" id="soal_dua" value="3" />
+                  <label class="form-check-label" for="soal_dua">Mudah</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_dua" id="soal_dua" value="4" />
+                  <label class="form-check-label" for="soal_dua">Sangat Mudah</label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row mt-4">
+                <label for="u1" class="form-check-label">Bagaimana pendapat Saudara tentang kecepatan waktu dalam memberikan pelayanan</label>
+              </div>
+              <div class="row mt-2 ms-1">
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_tiga" id="soal_tiga" value="1" />
+                  <label class="form-check-label" for="soal_tiga">Tidak Cepat</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_tiga" id="soal_tiga" value="2" />
+                  <label class="form-check-label" for="soal_tiga">Kurang Cepat</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_tiga" id="soal_tiga" value="3" />
+                  <label class="form-check-label" for="soal_tiga">Cepat</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_tiga" id="soal_tiga" value="4" />
+                  <label class="form-check-label" for="soal_tiga">Sangat Cepat</label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row mt-4">
+                <label for="u1" class="form-check-label">Bagaimana pendapat Saudara tentang kewajaran biaya/tarif dalam pelayanan</label>
+              </div>
+              <div class="row mt-2 ms-1">
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_empat" id="soal_empat" value="1" />
+                  <label class="form-check-label" for="soal_empat">Sangat Mahal</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_empat" id="soal_empat" value="2" />
+                  <label class="form-check-label" for="soal_empat">Cukup Mahal</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_empat" id="soal_empat" value="3" />
+                  <label class="form-check-label" for="soal_empat">Murah</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_empat" id="soal_empat" value="4" />
+                  <label class="form-check-label" for="soal_empat">Gratis/Tanpa Biaya</label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row mt-4">
+                <label for="u1" class="form-check-label">Bagaimana pendapat Saudara tentang kesesuaian produk/nama pelayanan antara yang tercantum dalam standar pelayanan dengan hasil yang diberikan</label>
+              </div>
+              <div class="row mt-2 ms-1">
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_lima" id="soal_lima" value="1" />
+                  <label class="form-check-label" for="soal_lima">Tidak Sesuai</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_lima" id="soal_lima" value="2" />
+                  <label class="form-check-label" for="soal_lima">Kurang Sesuai</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_lima" id="soal_lima" value="3" />
+                  <label class="form-check-label" for="soal_lima">Sesuai</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_lima" id="soal_lima" value="4" />
+                  <label class="form-check-label" for="soal_lima">Sangat Sesuai</label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row mt-4">
+                <label for="u1" class="form-check-label">Bagaimana pendapat Saudara tentang kompetensi/kemampuan petugas dalam melayani Saudara</label>
+              </div>
+              <div class="row mt-2 ms-1">
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_enam" id="soal_enam" value="1" />
+                  <label class="form-check-label" for="soal_enam">Tidak Kompeten</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_enam" id="soal_enam" value="2" />
+                  <label class="form-check-label" for="soal_enam">Kurang Kompeten</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_enam" id="soal_enam" value="3" />
+                  <label class="form-check-label" for="soal_enam">Kompeten</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_enam" id="soal_enam" value="4" />
+                  <label class="form-check-label" for="soal_enam">Sangat Kompeten</label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row mt-4">
+                <label for="u1" class="form-check-label">Bagaimana pendapat Saudara perilaku petugas dalam pelayanan yang terkait kesopanan dan keramah-tamahan</label>
+              </div>
+              <div class="row mt-2 ms-1">
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_tujuh" id="soal_tujuh" value="1" />
+                  <label class="form-check-label" for="soal_tujuh">Tidak Sopan dan Ramah</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_tujuh" id="soal_tujuh" value="2" />
+                  <label class="form-check-label" for="soal_tujuh">Kurang Sopan dan Ramah</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_tujuh" id="soal_tujuh" value="3" />
+                  <label class="form-check-label" for="soal_tujuh">Sopan dan Ramah</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_tujuh" id="soal_tujuh" value="4" />
+                  <label class="form-check-label" for="soal_tujuh">Sangat Sopan dan Ramah</label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row mt-4">
+                <label for="u1" class="form-check-label">Bagaimana pendapat Saudara tentang kualitas sarana dan prasarana</label>
+              </div>
+              <div class="row mt-2 ms-1">
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_delapan" id="soal_delapan" value="1" />
+                  <label class="form-check-label" for="soal_delapan">Buruk</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_delapan" id="soal_delapan" value="2" />
+                  <label class="form-check-label" for="soal_delapan">Cukup</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_delapan" id="soal_delapan" value="3" />
+                  <label class="form-check-label" for="soal_delapan">Baik</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_delapan" id="soal_delapan" value="4" />
+                  <label class="form-check-label" for="soal_delapan">Sangat Baik</label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row mt-4">
+                <label for="u1" class="form-check-label">Bagaimana pendapat Saudara tentang penanganan/tindak lanjut terhadap pengaduan pengguna layanan</label>
+              </div>
+              <div class="row mt-2 ms-1">
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_sembilan" id="soal_sembilan" value="1" />
+                  <label class="form-check-label" for="soal_sembilan">Tidak Ada</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_sembilan" id="soal_sembilan" value="2" />
+                  <label class="form-check-label" for="soal_sembilan">Ada tapi tidak berfungsi</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_sembilan" id="soal_sembilan" value="3" />
+                  <label class="form-check-label" for="soal_sembilan">Berfungsi kurang maksimal</label>
+                </div>
+                <div class="col-auto form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="soal_sembilan" id="soal_sembilan" value="4" />
+                  <label class="form-check-label" for="soal_sembilan">Dikelola dengan baik</label>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <!-- </div> -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary mt-5 mb-3"><i class="bi bi-send-fill"></i>&nbsp;&nbsp;Kirim</button>
+        </div>
       </form>
     </div>
-  </div>
-
-  <body>
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
