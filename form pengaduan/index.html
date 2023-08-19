@@ -33,8 +33,8 @@
     <div class="container text-center bg-success-subtle mt-1 py-2 fw-bold rounded-2">
       <div class="fs-2">FORMULIR LAYANAN PENGADUAN MASYARAKAT</div>
     </div>
-    <!-- <div class="container bg-dark-subtle mt-3 mb-5 rounded-3"> -->
-    <form action="" class="pengaduan">
+
+    <form action="" class="pengaduan" id="myForm" onsubmit="handleFormSubmit()">
       <div class="container mt-4 py-3 px-3 bg-dark-subtle rounded-3">
         <div class="row">
           <label class="fs-5 mb-4 text-center">D&nbsp;A&nbsp;T&nbsp;A&nbsp;&nbsp;&nbsp;P&nbsp;E&nbsp;L&nbsp;A&nbsp;P&nbsp;O&nbsp;R</label>
@@ -44,19 +44,19 @@
             <label for="nama" class="form-label">Nama Lengkap Pelapor</label>
           </div>
           <div class="col-sm-12 col-lg-5">
-            <input type="text" id="nama" class="form-control form-control-sm" />
+            <input type="text" class="form-control form-control-sm" name="NAMA PELAPOR" />
           </div>
         </div>
 
         <div class="row mt-3">
           <div class="col-sm-12 col-lg-3">
-            <label class="form-check-label" for="jenkel">Jenis Kelamin</label>
+            <label class="form-check-label">Jenis Kelamin</label>
           </div>
           <div class="col-sm-12 col-lg-auto ms-2">
             <div class="form-check-inline">
-              <input class="form-check-input" type="radio" id="lakilaki" name="jenkel" value="Laki-laki" checked />
+              <input type="radio" class="form-check-input" name="JENIS KELAMIN PELAPOR" value="LAKI-LAKI" checked />
               <label for="form-check-label" class="me-4">Laki-laki</label>
-              <input class="form-check-input" type="radio" id="perempuan" name="jenkel" value="Perempuan" />
+              <input type="radio" class="form-check-input" name="JENIS KELAMIN PELAPOR" value="PEREMPUAN" />
               <label for="form-check-label">Perempuan</label>
             </div>
           </div>
@@ -64,36 +64,36 @@
 
         <div class="row mt-3">
           <div class="col-sm-12 col-lg-3">
-            <label class="form-label" for="alamat">Alamat Rumah</label>
+            <label class="form-label">Alamat Rumah</label>
           </div>
           <div class="col-sm-12 col-lg-9">
-            <input type="text" name="alamat" id="alamat" class="form-control form-control-sm" />
+            <input type="text" class="form-control form-control-sm" name="ALAMAT RUMAH PELAPOR" />
           </div>
         </div>
 
         <div class="row mt-3">
           <div class="col-sm-12 col-lg-3">
-            <label class="form-label" for="pekerjaan">Pekerjaan</label>
+            <label class="form-label">Pekerjaan</label>
           </div>
           <div class="col-sm-12 col-lg-3">
-            <select class="form-select form-select-sm" name="pekerjaan" id="pekerjaan">
+            <select class="form-select form-select-sm" name="PEKERJAAN PELAPOR">
               <option selected>Pilih...</option>
-              <option value="tni">TNI</option>
-              <option value="polri">POLRI</option>
-              <option value="pns">PNS</option>
-              <option value="swasta">SWASTA</option>
-              <option value="wirausaha">WIRAUSAHA</option>
-              <option value="lainnya">LAINNYA</option>
+              <option value="TNI">TNI</option>
+              <option value="POLRI">POLRI</option>
+              <option value="PNS">PNS</option>
+              <option value="SWASTA">SWASTA</option>
+              <option value="WIRAUSAHA">WIRAUSAHA</option>
+              <option value="LAINNYA">LAINNYA</option>
             </select>
           </div>
         </div>
 
         <div class="row mt-3">
           <div class="col-sm-12 col-lg-3">
-            <label class="form-label" for="notelp">Nomor Telp/Hp</label>
+            <label class="form-label">Nomor Telp/Hp</label>
           </div>
           <div class="col-sm-12 col-lg-2 mb-sm-3">
-            <input type="text" name="notelp" id="notelp" class="form-control form-control-sm" />
+            <input type="text" name="NO TELP PELAPOR" class="form-control form-control-sm" />
           </div>
         </div>
       </div>
@@ -105,22 +105,22 @@
         </div>
         <div class="row">
           <div class="col-sm-12 col-lg-3">
-            <label for="nama2" class="form-label">Nama Lengkap Terlapor</label>
+            <label class="form-label">Nama Lengkap Terlapor</label>
           </div>
           <div class="col-sm-12 col-lg-5">
-            <input type="text" id="nama2" class="form-control form-control-sm" />
+            <input type="text" class="form-control form-control-sm" name="NAMA TERLAPOR" />
           </div>
         </div>
 
         <div class="row mt-3">
           <div class="col-sm-12 col-lg-3">
-            <label class="form-check-label" for="jenkel2">Jenis Kelamin</label>
+            <label class="form-check-label">Jenis Kelamin</label>
           </div>
           <div class="col-sm-12 col-lg-auto ms-2">
             <div class="form-check-inline">
-              <input class="form-check-input" type="radio" id="lakilaki2" name="jenkel2" value="Laki-laki" checked />
+              <input class="form-check-input" type="radio" id="lakilaki2" name="JENIS KELAMIN TERLAPOR" value="LAKI-LAKI" checked />
               <label for="form-check-label" class="me-4">Laki-laki</label>
-              <input class="form-check-input" type="radio" id="perempuan2" name="jenkel2" value="Perempuan" />
+              <input class="form-check-input" type="radio" id="perempuan2" name="JENIS KELAMIN TERLAPOR" value="PEREMPUAN" />
               <label for="form-check-label">Perempuan</label>
             </div>
           </div>
@@ -128,36 +128,36 @@
 
         <div class="row mt-3">
           <div class="col-sm-12 col-lg-3">
-            <label class="form-label" for="alamat2">Alamat Rumah</label>
+            <label class="form-label">Alamat Rumah</label>
           </div>
           <div class="col-sm-12 col-lg-9">
-            <input type="text" name="alamat2" id="alamat2" class="form-control form-control-sm" />
+            <input type="text" class="form-control form-control-sm" name="ALAMAT RUMAH TERLAPOR" />
           </div>
         </div>
 
         <div class="row mt-3">
           <div class="col-sm-12 col-lg-3">
-            <label class="form-label" for="pekerjaan2">Pekerjaan</label>
+            <label class="form-label">Pekerjaan</label>
           </div>
           <div class="col-sm-12 col-lg-3">
-            <select class="form-select form-select-sm" name="pekerjaan2" id="pekerjaan2">
+            <select class="form-select form-select-sm" name="PEKERJAAN TERLAPOR">
               <option selected>Pilih...</option>
-              <option value="tni">TNI</option>
-              <option value="polri">POLRI</option>
-              <option value="pns">PNS</option>
-              <option value="swasta">SWASTA</option>
-              <option value="wirausaha">WIRAUSAHA</option>
-              <option value="lainnya">LAINNYA</option>
+              <option value="TNI">TNI</option>
+              <option value="POLRI">POLRI</option>
+              <option value="PNS">PNS</option>
+              <option value="SWASTA">SWASTA</option>
+              <option value="WIRAUSAHA">WIRAUSAHA</option>
+              <option value="LAINNYA">LAINNYA</option>
             </select>
           </div>
         </div>
 
         <div class="row mt-3">
           <div class="col-sm-12 col-lg-3">
-            <label class="form-label" for="notelp2">Nomor Telp/Hp</label>
+            <label class="form-label">Nomor Telp/Hp</label>
           </div>
           <div class="col-sm-12 col-lg-2 mb-sm-3">
-            <input type="text" name="notelp2" id="notelp2" class="form-control form-control-sm" />
+            <input type="text" class="form-control form-control-sm" name="NO TELP TERLAPOR" />
           </div>
         </div>
       </div>
@@ -168,17 +168,21 @@
         </div>
         <div class="row">
           <div class="col-sm-12 col-lg-3">
-            <label for="nama_masalah" class="form-label">Permasalahan yang diadukan</label>
+            <label class="form-label">Permasalahan yang diadukan</label>
           </div>
           <div class="col-sm col-lg-6">
-            <input type="text" id="nama_masalah" class="form-control form-control-sm" />
+            <input type="text" class="form-control form-control-sm" name="" PERMASALAHAN YANG DIADUKAN />
           </div>
         </div>
         <div class="row mt-3">
           <div class="col-sm-12 col-lg-3">
-            <label for="bukti_dukung" class="form-label">Bukti Pendukung Pengaduan</label>
+            <label class="form-label">Bukti Pendukung Pengaduan</label>
           </div>
-          <div class="col-sm-12 col-lg-6"></div>
+          <div class="col-sm-12 col-lg-4">
+            <div class="input-group">
+              <input type="file" class="form-control" name="BUKTI DUKUNG" />
+            </div>
+          </div>
         </div>
         <div class="row mt-3">
           <div class="col-sm-12 col-lg-3">
@@ -186,26 +190,26 @@
           </div>
           <div class="col-sm-12 col-lg">
             <div class="form-floating">
-              <textarea class="form-control" placeholder="masukan komentar" id="floatingTextarea2" style="height: 150px"></textarea>
+              <textarea class="form-control" name="HARAPAN" style="height: 150px"></textarea>
             </div>
           </div>
         </div>
         <div class="row mt-3">
           <div class="col-12">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-              <label class="form-check-label" for="invalidCheck">Ya,&nbsp;&nbsp;Data yang saya sampaikan adalah data yang sebanar-benarnya</label>
+              <input type="checkbox" class="form-check-input" id="invalidCheck" required />
+              <label class="form-check-label">Ya,&nbsp;&nbsp;Data yang saya sampaikan adalah data yang sebanar-benarnya</label>
               <div class="invalid-feedback">Anda harus menyetujui data yang Anda sampaikan sebalum anda kirim.</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="text-center">
+      <div class="text-center mb-5">
         <button type="submit" class="btn btn-primary mt-5 mb-3 fw-bold" style="width: 150px"><i class="bi bi-send-fill"></i>&nbsp;&nbsp;Kirim</button>
       </div>
     </form>
-    <!-- </div> -->
+
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
